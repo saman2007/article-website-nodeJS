@@ -9,7 +9,7 @@ const jsonReader = require("./helpers/JSONReader");
 
 const server = express();
 
-server.listen(3000);
+server.listen(process.env.PORT || 3000);
 
 server.use(express.static(path.resolve(__dirname, "public")));
 
