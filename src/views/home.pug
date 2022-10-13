@@ -1,0 +1,13 @@
+extends ./layouts/html.pug
+include ./layouts/article.pug 
+
+block styles 
+    link(rel="stylesheet", href="/styles/index.css")
+
+block content 
+    h1.title newest articles
+    div.articleContainer
+        each article in articles 
+            +articleCard(article.cover, article.coverAlt, article.title, article.text, article.date, article.path) 
+    div.displayAllArticlesContainer
+        a(href="/articles").seeAllArticles see all articles

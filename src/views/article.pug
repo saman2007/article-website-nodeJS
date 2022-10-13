@@ -1,0 +1,11 @@
+extends ./layouts/html.pug
+
+block styles 
+    link(rel="stylesheet", href="/styles/article.css")
+
+block content
+    div.articleContainer
+        img(src=article.cover, alt=article.coverAlt).cover
+        h1.articleTitle #{article.title}
+        p.articleTxt #{article.text}
+        p.releasDate releas date: #{article.date}

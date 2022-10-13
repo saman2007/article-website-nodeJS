@@ -1,0 +1,13 @@
+extends ./layouts/html.pug
+
+block styles 
+    link(rel="stylesheet", href="/styles/aboutMe.css")
+
+block content 
+    div.aboutContainer
+        h1.title about me
+        p.aboutMeTxt #{text}
+        p.contactWays you can contact me with these ways: 
+        p.contact phone: #{phone}
+        p.contact email: #{email}
+        a(href=github).contact github: #{github}

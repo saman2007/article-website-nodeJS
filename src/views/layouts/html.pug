@@ -1,0 +1,17 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/styles/template.css")
+        block styles
+        title #{title}
+    body
+        div.contentsContainer
+            nav.menu
+                each item in menu 
+                    a(href=item.href, class= url === item.href ? "menuItem menuItemSelect" : "menuItem") #{item.title}
+            block content
+        footer.footer 
+            p.footerTxt developed by saman

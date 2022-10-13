@@ -1,0 +1,9 @@
+mixin articleCard(img, alt, title, text, date, path)
+    div.articleCard
+        img(src=img, alt=alt).cover
+        div.articlExtraInfos
+            div
+                h2.articleTitle=title
+                p.articleSummary=text
+                p.articleDate=date
+            a(href=path).readMore read more
