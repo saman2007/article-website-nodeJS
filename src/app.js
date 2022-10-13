@@ -11,10 +11,10 @@ const server = express();
 
 server.listen(3000);
 
-server.use(express.static(path.resolve("public")));
+server.use(express.static(path.resolve(__dirname, "public")));
 
 server.set("view engine", "pug");
-server.set("views", "views");
+server.set("views", path.resolve(__dirname, "views"));
 
 server.use(async (req, res, next) => {
   const menu = await jsonReader("menu.json");
